@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: emailinfoapp
-  namespace: default
+  namespace: emailinfoapp
 spec:
   replicas: 1
   selector:
@@ -22,7 +22,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name:  emailinfoappservice
-  namespace: default
+  namespace: emailinfoapp
 spec:
   type: NodePort
   selector:
