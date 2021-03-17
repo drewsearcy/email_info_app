@@ -63,6 +63,7 @@ This step will use the Docker image built in step 2 and deploy the service to Ku
 <b>Deployment Option 2:</b>
 
 Execute the supplied deploy_email_info_app.sh file:
+
 `sh deploy_email_info_app.sh`
 
 #### Example usage
