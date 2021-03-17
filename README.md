@@ -34,7 +34,7 @@ Message-ID:
 
 # How to use
 
-#### Step 1: Get the codef rom Github
+#### Step 1: Get the code from Github
 `git clone git@github.com:drewsearcy/email_info_app.git`
 
 #### Step 2: Build the Docker image
@@ -46,6 +46,7 @@ simply places the email_info_app.php file in the web root of the image.
 `docker build -t email_info_app .`
 
 <b>Build Image Option 2:</b>
+
 Execute the supplied build_email_app_image.sh file:
 
 `sh build_email_app_image.sh`
@@ -54,6 +55,7 @@ Execute the supplied build_email_app_image.sh file:
 This step will use the Docker image built in step 2 and deploy the service to Kubernetes and expose port 30001 on the node. Alternatively, you could deploy the image to your own registry and adjust the `imagePullPolicy` in `k8s_deploy_email_info_app.yml` file.
 
 <b>Deployment Option 1:</b>
+
 `kubectl create namespace emailinfoapp`
 
 `kubectl apply -f k8s_deploy_email_info_app.yml`
@@ -72,3 +74,5 @@ This example uses curl and the supplied email file (sample_email.msg) in the POS
 #### Cleanup
 
 You can use the supplied cleanup.sh script to remove the Kubernetes Namespace, Deployment, Pods, Service and the Docker image.
+
+`sh cleanup.sh`
